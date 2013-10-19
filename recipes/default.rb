@@ -14,10 +14,13 @@ include_recipe "rbenv::ohai_plugin"
 
 req_rubies = node[:etudev_ruby][:rubies].to_a.uniq
 req_gems =  node[:etudev_ruby][:gems].to_a.uniq
+req_global =  node[:etudev_ruby][:global_ruby]
 
 req_rubies.each do |myruby|
 
-  rbenv_ruby myruby
+  rbenv_ruby myruby do
+    global (myruby == req_global)
+  end
 
   req_gems.each do |mygem|
     rbenv_gem mygem do

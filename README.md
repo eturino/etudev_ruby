@@ -29,6 +29,12 @@ e.g.
     <td><tt>['2.0.0-p247']</tt></td>
   </tr>
   <tr>
+    <td><tt>['etudev_ruby']['global_ruby']</tt></td>
+    <td>String</td>
+    <td>The ruby version to be set as global when installing</td>
+    <td><tt>'2.0.0-p247'</tt></td>
+  </tr>
+  <tr>
     <td><tt>['etudev_ruby']['gems']</tt></td>
     <td>Array</td>
     <td>list of gems to install with each ruby versions</td>
